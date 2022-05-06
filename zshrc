@@ -39,3 +39,18 @@ _load_settings "$HOME/.zsh/configs"
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# oh my zsh
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
+# zstyle ':omz:update' mode reminder 
+# zstyle ':omz:update' frequency 7
+plugins=(git kubectl)
+source $ZSH/oh-my-zsh.sh
+
+# kube promote
+autoload -U colors; colors
+source $HOME/.zsh-kubectl-prompt/kubectl.zsh
+RPROMPT='%{$fg[blue]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}'

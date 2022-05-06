@@ -1,0 +1,6 @@
+[submodule "oh-my-zsh"]
+	path = oh-my-zsh
+	url = https://github.com/ohmyzsh/ohmyzsh.git
+[submodule "zsh-kubectl-prompt"]
+	path = zsh-kubectl-prompt
+	url = https://github.com/superbrothers/zsh-kubectl-prompt.git
