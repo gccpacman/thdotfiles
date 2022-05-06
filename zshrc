@@ -42,15 +42,21 @@ _load_settings "$HOME/.zsh/configs"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# lang
+export LANG='UTC-8'
+export LC_ALL='en_US.UTF-8'
+
 # oh my zsh
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH="$HOME/.dotfiles/oh-my-zsh"
+
 ZSH_THEME="robbyrussell"
 # zstyle ':omz:update' mode reminder 
 # zstyle ':omz:update' frequency 7
-plugins=(git kubectl)
+plugins=(git docker kubectl helm brew tmux vscode python mvn themes virtualenv macos tmux) 
+
 source $ZSH/oh-my-zsh.sh
 
 # kube promote
 autoload -U colors; colors
-source $HOME/.zsh-kubectl-prompt/kubectl.zsh
+source $HOME/.dotfiles/zsh-kubectl-prompt/kubectl.zsh
 RPROMPT='%{$fg[blue]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}'
